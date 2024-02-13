@@ -9,7 +9,6 @@ vscode-wizard-example-extension is a vscode-extension using the npm module [vsco
 [vscode-wizard](https://github.com/redhat-developer/vscode-wizard) is a fork and large expansion in the API of [vscode-page](https://github.com/DTeam-Top/vscode-page), aiming to create wizards out of a javascript object definition that includes pages, fields, validators, and option providers for combos. See [vscode-wizard](https://github.com/redhat-developer/vscode-wizard) for more information. 
 
 ## Features
-
 This repo demonstrates the various widgets and validation methods available in [vscode-wizard](https://github.com/redhat-developer/vscode-wizard). 
 
 ## Installing
@@ -19,7 +18,7 @@ Once inside the project folder, execute the following:
 ```shell
 npm install
 npm run build
-vsce package
+npx vsce package
 ```
 
 ## Usage

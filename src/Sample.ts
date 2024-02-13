@@ -458,7 +458,7 @@ export function getSinglePageAllControlsDefinition(context: vscode.ExtensionCont
               ],
               validator: (parameters:any) => {
                   let items : ValidatorResponseItem[] = [];
-                  const age : Number = Number(parameters.age);
+                  const age : number = parameters.age;
                   if( !parameters.age || isNaN(parameters.age)) {
                     items.push(createValidationItem(SEVERITY.ERROR, "age", "Age must not be blank"));
                   } else if( age <= 3) {
@@ -500,7 +500,7 @@ export function getSinglePageAllControlsDefinition(context: vscode.ExtensionCont
             },
             performFinish(wizard:WebviewWizard, data: any): Promise<PerformFinishResponse | null> {
                 // Do something
-                var age : Number = Number(data.age);
+                var age : number = data.age;
                 if( age >= 18 ) {
                     vscode.window.showInformationMessage('Adult has cc number: ' + data.cc);
                 } else {
@@ -512,7 +512,7 @@ export function getSinglePageAllControlsDefinition(context: vscode.ExtensionCont
             },
             getNextPage(page:IWizardPage, data: any): IWizardPage | null {
                 if( page.getId() === 'page1') {
-                    var age : Number = Number(data.age);
+                    var age : number = data.age;
                     const tmp = page.getWizard();
                     if( age >= 18 ) {
                         return tmp === null ? null : tmp.getPage('page2adult');
@@ -556,7 +556,7 @@ export function getSinglePageAllControlsDefinition(context: vscode.ExtensionCont
               ],
               validator: (parameters:any) => {
                   let items: ValidatorResponseItem[] = [];
-                  const age : Number = Number(parameters.age);
+                  const age : number = parameters.age;
                   if( !parameters.age || isNaN(parameters.age)) {
                     items.push(createValidationItem(SEVERITY.ERROR, "age", "Age must not be blank"));
                   } else if( age <= 3) {
@@ -597,7 +597,7 @@ export function getSinglePageAllControlsDefinition(context: vscode.ExtensionCont
             },
             performFinish(wizard:WebviewWizard, data: any): Promise<PerformFinishResponse | null> {
                 // Do something
-                var age : Number = Number(data.age);
+                var age : number = data.age;
                 if( age >= 18 ) {
                     vscode.window.showInformationMessage('Adult has cc number: ' + data.cc);
                 } else {
@@ -609,7 +609,7 @@ export function getSinglePageAllControlsDefinition(context: vscode.ExtensionCont
             },
             getNextPage(page:IWizardPage, data: any): IWizardPage | null {
                 if( page.getId() === 'page1') {
-                    var age : Number = Number(data.age);
+                    var age : number = data.age;
                     const tmp = page.getWizard();
                     if( age >= 18 ) {
                         return tmp === null ? null : tmp.getPage('page2adult');
